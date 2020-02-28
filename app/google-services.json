@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "150639215634",
+    "firebase_url": "https://BulaiRadu_P3-358de.firebaseio.com",
+    "project_id": "BulaiRadu_P3-358de",
+    "storage_bucket": "BulaiRadu_P3-358de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150639215634:android:50794f6466b0f3a4",
+        "android_client_info": {
+          "package_name": "ro.upb.etti.stud.BulaiRadu_P3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150639215634-li8t4o8aha3vcmbtmkgaitm9rjond9nd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.upb.etti.stud.BulaiRadu_P3",
+            "certificate_hash": "3cfeaffeb9d97794f6197d24dc7434f74f65b3a4"
+          }
+        },
+        {
+          "client_id": "150639215634-5t8hulaa5k3l4qeikgd5kljc1g79f58s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-a0Hto-TpYyPEuP2N8rSTKAVg1af9_X4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150639215634-5t8hulaa5k3l4qeikgd5kljc1g79f58s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
