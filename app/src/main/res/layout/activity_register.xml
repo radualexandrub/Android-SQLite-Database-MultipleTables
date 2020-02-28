@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idregister_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Register"
+    android:orientation="vertical"
+    android:background="@drawable/homepage_spital_hue"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60sp">
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:text="Utilizator nou:"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/idregister_edittext_username"
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="2dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/login_username"
+            android:hint="Username"/>
+
+        <EditText
+            android:id="@+id/idregister_edittext_password"
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/login_password"
+            android:hint="Password"/>
+
+        <EditText
+            android:id="@+id/idregister_edittext_confirm_password"
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/login_password"
+            android:hint="Confirm Password"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/idregister_button_register"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="REGISTER !"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Aveti deja cont?"/>
+
+        <TextView
+            android:id="@+id/idregister_textview_login_back"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="Logheaza-ma!"/>
+
+    </LinearLayout>
+
+</LinearLayout>

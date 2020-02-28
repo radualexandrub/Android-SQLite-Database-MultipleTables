@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingBottom="@dimen/dimen_10"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:paddingTop="@dimen/dimen_10">
+
+    <TextView
+        android:id="@+id/idrow_pacient_id_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dot_height"
+        android:layout_marginRight="@dimen/dot_margin_right"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorPrimary"
+        android:lineSpacingExtra="0dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_cnp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/idrow_pacient_id_dot"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/timestamp" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_nume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idrow_pacient_cnp"
+        android:layout_toRightOf="@id/idrow_pacient_id_dot"
+        android:textColor="@color/darker_grey"
+        android:textSize="@dimen/note_list_text" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_prenume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idrow_pacient_nume"
+        android:layout_toRightOf="@id/idrow_pacient_id_dot"
+        android:textColor="@color/darker_grey"
+        android:textSize="@dimen/note_list_text" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_adresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idrow_pacient_prenume"
+        android:layout_toRightOf="@id/idrow_pacient_id_dot"
+        android:textColor="@color/darker_grey"
+        android:textSize="@dimen/note_list_text" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_asigurare"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idrow_pacient_adresa"
+        android:layout_toRightOf="@id/idrow_pacient_asigurareTEXT"
+        android:textColor="@color/darker_grey"
+        android:textSize="@dimen/note_list_text" />
+
+    <TextView
+        android:id="@+id/idrow_pacient_asigurareTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asigurare: "
+        android:layout_toRightOf="@id/idrow_pacient_id_dot"
+        android:layout_below="@id/idrow_pacient_adresa"
+        android:textColor="@color/darker_grey"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

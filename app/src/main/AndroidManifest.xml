@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ro.upb.etti.stud.BulaiRadu_P3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Activity_Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity_Register"></activity>
+
+        <activity android:name=".MainActivity">
+            android:label="Aplicatia DB Spital"
+        </activity>
+        <activity
+            android:name=".Activities.Activity_Consultatii"
+            android:label="Tabela Consultatii"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activities.Activity_Medicamente"
+            android:label="Tabela Medicamente"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activities.Activity_Medici"
+            android:label="Tabela Medici"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activities.Activity_Pacienti"
+            android:label="Tabela Pacienti"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activities.Activity_Sectii"
+            android:label="Tabela Sectii"
+            android:parentActivityName=".MainActivity" />
+
+
+
+
+
+
+        <activity android:name=".MainActivity_Client">
+            android:label="Aplicatia DB Spital"
+        </activity>
+        <activity
+            android:name=".Activities_Client.Activity_Consultatii_Client"
+            android:label="Tabela Consultatii"
+            android:parentActivityName=".MainActivity_Client" />
+        <activity
+            android:name=".Activities_Client.Activity_Medicamente_Client"
+            android:label="Tabela Medicamente"
+            android:parentActivityName=".MainActivity_Client" />
+        <activity
+            android:name=".Activities_Client.Activity_Medici_Client"
+            android:label="Tabela Medici"
+            android:parentActivityName=".MainActivity_Client" />
+        <activity
+            android:name=".Activities_Client.Activity_Pacienti_Client"
+            android:label="Tabela Pacienti"
+            android:parentActivityName=".MainActivity_Client" />
+        <activity
+            android:name=".Activities_Client.Activity_Sectii_Client"
+            android:label="Tabela Sectii"
+            android:parentActivityName=".MainActivity_Client" />
+    </application>
+
+</manifest>

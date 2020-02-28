@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idlogin_container"
+    android:orientation="vertical"
+    android:background="@drawable/homepage_spital"
+    android:gravity="center_horizontal">
+
+<!--    The xmlns attribute specifies the xml namespace for a document-->
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100sp">
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:text="Utilizator existent:"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/idlogin_edittext_username"
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="2dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/login_username"
+            android:hint="Username"/>
+
+        <EditText
+            android:id="@+id/idlogin_edittext_password"
+            android:layout_width="200sp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/login_password"
+            android:hint="Password"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/idlogin_button_login"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:text="LOGIN !"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Nu aveti cont?"/>
+
+        <TextView
+            android:id="@+id/idlogin_textview_register"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="Inregistreaza-ma!"/>
+
+    </LinearLayout>
+</LinearLayout>
