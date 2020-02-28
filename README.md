@@ -136,7 +136,7 @@ This app will allow the user to do the following operations:
 - Change the current authenticated user.
 
 ## Additional Info:
-# Tables creation:
+### Tables creation:
 In order to use the Android interface to perform CRUD operations, it is necessary to treat the entities (records of each relation/table) as objects. Thus, for each table a class will be created, which will have its respective attributes.
 - /app/src/Main/Java/../Model_Classes/Utilizatori.java
 - /app/src/Main/Java/../Model_Classes/Medici.java
@@ -147,10 +147,10 @@ In order to use the Android interface to perform CRUD operations, it is necessar
 
 Once created the classes for each table (Users, Doctors, Sections, Patients, Consultations, Medications), a new class named **DataBaseHelper** will be created in order to execute SQL commands. This will contain all the commands for creating the new tables and all the methods for inserting, reading, updating and deleting data (entries) from tables. In addition, this class (DataBaseHelper) will also contains some special methods (such as retrieving all the ids of a table's records and storing them in an Integer type list) that will later help perform other operations (for example, view linking tables and view data referred to from the other tables).
 
-# Viewing the records (entries/rows) from a table
+### Viewing the records (entries/rows) from a table
 To view the records from any table, we will use a special Android class, called RecyclerView, in which the entries/rows from tables will be designed using *list_row_name_table.xml* files (so that different TextView boxes will be placed which will be later updated with the information/data to show on screen from the entries). The RecyclerView object will retrieve a list of objects of the class associated with a table; obtaining the list of objects is done by the methods getAllMedics, getAllPatients, getAllConsultations, getAllSections, getAllMedicines in the DataBaseHelper class. 
 
-# Adding, modifying, deleting entries in a table
-An authenticated user in the application (Client or Administrator) will be able to perform table insertion operations. The actual insertion into the database is done using the insertSection method (or any other table) in the DataBaseHelper.java class. But before calling this function, in the activity of the respective table there will be a FAB (Floating Action Button) button, which when pressed will display a text box dialog to complete the data to be added. The data will then be retrieved, entered into the database by the insertSection method, which will then be called the getSection method to retrieve the new object with the added data. With this object we will update the list of objects required to display all entries using RecyclerView.
+### Adding, modifying, deleting entries in a table
+An authenticated user in the application (Client or Administrator) will be able to perform table insertion operations. The actual insertion into the database is done using the insertSection method (or any other insertTableName method) in the DataBaseHelper.java class. But before calling this function, in the activity of the respective table there will be a FAB (Floating Action Button) button, which when pressed will display a text box dialog to complete the data to be added. The data will then be retrieved, entered into the database by the insertSection method, which will then be called the getSection method to retrieve the new object with the added data. With this object we will update the list of objects required to display all entries using RecyclerView.
 
 Modifying / updating involves the same steps as inserting, only taking into account the position of the selected item in RecyclerView. This item will in fact be the object in the Sections List (the list of objects in the classes), in which the respective id will be searched to call the updateSections method in the DataBaseHelper, followed by updating the data.
