@@ -35,13 +35,13 @@ decomposed by a link table called Sections (with PatientID and MedicID as foreig
 - between the Patient table and the Medication table there is an association of multiplicity M:N. In the
 in this case, the connection table will be called Consultations (with PatientID and MedicineID as foreign keys).
 
-This diagram was made in MySQL Workbench environment, writing the following SQL code:
+This diagram was made in MySQL Workbench environment, by writing the following SQL code:
 ```
 -- -----------------------------------------------------
 -- Schema SQLiteProject
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `SQLiteProject` DEFAULT CHARACTER SET latin1 ;
-USE `SQLiteProject` ;
+CREATE SCHEMA IF NOT EXISTS `SQLiteProject`;
+USE `SQLiteProject`;
 
 -- -----------------------------------------------------
 -- Table `SQLiteProject`.`pacienti`
@@ -54,8 +54,6 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`pacienti` (
   `Adresa` VARCHAR(45) NULL DEFAULT NULL,
   `Asigurare` TINYINT(4) NULL DEFAULT NULL,
   PRIMARY KEY (`IdPacient`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
@@ -65,8 +63,6 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`medicamente` (
   `IdMedicament` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `Denumire` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`IdMedicament`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
@@ -92,8 +88,6 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`consultatii` (
     REFERENCES `SQLiteProject`.`medicamente` (`IdMedicament`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
@@ -105,8 +99,6 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`medici` (
   `PrenumeMedic` VARCHAR(45) NULL DEFAULT NULL,
   `Specializare` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`IdMedic`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
@@ -129,13 +121,6 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`sectii` (
     REFERENCES `SQLiteProject`.`medici` (`IdMedic`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
 The interface and functionality of the application made in Android Studio will allow the user to perform operations: view, add, edit, delete. Viewing the connection tables will mean viewing the data referenced in the other tables.
