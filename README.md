@@ -1,6 +1,20 @@
 # Android-SQLite-Database-MultipleTables
 Database management application created with SQLite, using Android interface.
 
+## Screenshots:
+<img src="Images/Screenshot01_LogIn.jpg">
+<img src="Images/Screenshot02_Register.jpg">
+<img src="Images/Screenshot03_MainMenu.jpg">
+<img src="Images/Screenshot04_Options_as_ADMIN.jpg">
+<img src="Images/Screenshot05_Options_as_CLIENT.jpg">
+<img src="Images/Screenshot06_MedicsTable.jpg">
+<img src="Images/Screenshot07_PacientsTable.jpg">
+<img src="Images/Screenshot08_PacientsTableEdit.jpg">
+<img src="Images/Screenshot09_PacientsAdd.jpg">
+<img src="Images/Screenshot10_SectionsTable.jpg">
+<img src="Images/Screenshot11_SectionsEdit.jpg">
+<img src="Images/Screenshot12_MainMenu2.jpg">
+
 The figure below shows the tables corresponding to the database diagram for the application.
 <img src="Images/Diagram.jpg">
 The database is composed of the following tables:
