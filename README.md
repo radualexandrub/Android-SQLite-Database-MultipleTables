@@ -20,6 +20,8 @@ Database management application created with SQLite, using Android interface.
   <img src="Images/Screenshot11_SectionsEdit.jpg" width=200 height=355>
   <img src="Images/Screenshot12_MainMenu2.jpg" width=200 height=355>
 </p>
+
+## Database used:
 The figure below shows the tables corresponding to the database diagram for the application.
 <img src="Images/Diagram.jpg">
 The database is composed of the following tables:
@@ -33,7 +35,6 @@ decomposed by a link table called Sections (with PatientID and MedicID as foreig
 - between the Patient table and the Medication table there is an association of multiplicity M:N. In the
 in this case, the connection table will be called Consultations (with PatientID and MedicineID as foreign keys).
 
-## Database used:
 This diagram was made in MySQL Workbench environment, writing the following SQL code:
 ```
 -- -----------------------------------------------------
@@ -140,3 +141,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 The interface and functionality of the application made in Android Studio will allow the user to perform operations: view, add, edit, delete. Viewing the connection tables will mean viewing the data referenced in the other tables.
 
 ## Application description:
+This app will allow the user to do the following operations:
+- To register as a Client user, by creating an account in the database (eg: an entry in the Users table, separated from the rest of the schema).
+- To access the application by logging in either as a Client user or as an Administrator user. Customers can perform the following operations: viewing, adding and modifying data. The administrator can perform the operations of viewing, adding, modifying and deleting data. (To create a new Administrator user, it is needed to open Android Studio and call **db.InsertUtilizator("InsertName", "InsertPass", "Admin");** method in one of the **onCreate** methods (either from Activity_Login.java or Activity_Register.java)
+- View data in each table.
+- Insert data into each of the tables.
+- Edit the data (hold down a record in a table to acces the edit/delete menu)
+- Sort the doctors table by name of doctor or by specialization.
+- Change the current authenticated user.
