@@ -3,24 +3,22 @@ Database management application created with SQLite, using Android interface.
 
 ## Screenshots:
 <p float="left">
-  <img src="Images/Screenshot01_LogIn.jpg" width=270 height=480>
-  <img src="Images/Screenshot02_Register.jpg" width=270 height=480>
-  <img src="Images/Screenshot03_MainMenu.jpg" width=270 height=480>
+  <img src="Images/Screenshot01_LogIn.jpg" width=200 height=355>
+  <img src="Images/Screenshot02_Register.jpg" width=200 height=355>
+  <img src="Images/Screenshot03_MainMenu.jpg" width=200 height=355>
+  <img src="Images/Screenshot04_Options_as_ADMIN.jpg" width=200 height=355>
 </p>
 <p float="left">
-  <img src="Images/Screenshot04_Options_as_ADMIN.jpg" width=270 height=480>
-  <img src="Images/Screenshot05_Options_as_CLIENT.jpg" width=270 height=480>
-  <img src="Images/Screenshot06_MedicsTable.jpg" width=270 height=480>
+  <img src="Images/Screenshot05_Options_as_CLIENT.jpg" width=200 height=355>
+  <img src="Images/Screenshot06_MedicsTable.jpg" width=200 height=355>
+  <img src="Images/Screenshot07_PacientsTable.jpg" width=200 height=355>
+  <img src="Images/Screenshot08_PacientsTableEdit.jpg" width=200 height=355>
 </p>
 <p float="left">
-  <img src="Images/Screenshot07_PacientsTable.jpg" width=270 height=480>
-  <img src="Images/Screenshot08_PacientsTableEdit.jpg" width=270 height=480>
-  <img src="Images/Screenshot09_PacientsAdd.jpg" width=270 height=480>
-</p>
-<p float="left">
-  <img src="Images/Screenshot10_SectionsTable.jpg" width=270 height=480>
-  <img src="Images/Screenshot11_SectionsEdit.jpg" width=270 height=480>
-  <img src="Images/Screenshot12_MainMenu2.jpg" width=270 height=480>
+  <img src="Images/Screenshot09_PacientsAdd.jpg" width=200 height=355>
+  <img src="Images/Screenshot10_SectionsTable.jpg" width=200 height=355>
+  <img src="Images/Screenshot11_SectionsEdit.jpg" width=200 height=355>
+  <img src="Images/Screenshot12_MainMenu2.jpg" width=200 height=355>
 </p>
 The figure below shows the tables corresponding to the database diagram for the application.
 <img src="Images/Diagram.jpg">
@@ -35,6 +33,7 @@ decomposed by a link table called Sections (with PatientID and MedicID as foreig
 - between the Patient table and the Medication table there is an association of multiplicity M:N. In the
 in this case, the connection table will be called Consultations (with PatientID and MedicineID as foreign keys).
 
+## Database used:
 This diagram was made in MySQL Workbench environment, writing the following SQL code:
 ```
 -- -----------------------------------------------------
@@ -138,6 +137,6 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
-
-
 The interface and functionality of the application made in Android Studio will allow the user to perform operations: view, add, edit, delete. Viewing the connection tables will mean viewing the data referenced in the other tables.
+
+## Application description:
