@@ -16,14 +16,17 @@ in this case, the connection table will be called Consultations (with PatientID 
 
 This diagram was made in MySQL Workbench environment, writing the following SQL code:
 ```
-CREATE SCHEMA IF NOT EXISTS `SQLiteProject` DEFAULT CHARACTER SET latini;
-USE `SQLiteProject`;
+-- -----------------------------------------------------
+-- Schema SQLiteProject
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `SQLiteProject` DEFAULT CHARACTER SET latin1 ;
+USE `SQLiteProject` ;
 
---- -------------------------------------------------------------
---- Table `SQLiteProject`.`pacienti`
-----------------------------------------------------------------
+-- -----------------------------------------------------
+-- Table `SQLiteProject`.`pacienti`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SQLiteProject`.`pacienti` (
-  `IdPacient` BIGINT(20) UNSIGNED NOT NULL AUTO_ICREMENT,
+  `IdPacient` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `CNP` VARCHAR(45) NULL DEFAULT NULL,
   `NumePacient` VARCHAR(45) NULL DEFAULT NULL,
   `PrenumePacient` VARCHAR(45) NULL DEFAULT NULL,
@@ -31,14 +34,87 @@ CREATE TABLE IF NOT EXISTS `SQLiteProject`.`pacienti` (
   `Asigurare` TINYINT(4) NULL DEFAULT NULL,
   PRIMARY KEY (`IdPacient`))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = latini;
+DEFAULT CHARACTER SET = latin1;
 
 
---- -------------------------------------------------------------
---- Table `SQLiteProject`.`medicamente`
-----------------------------------------------------------------
+-- -----------------------------------------------------
+-- Table `SQLiteProject`.`medicamente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SQLiteProject`.`medicamente` (
+  `IdMedicament` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `Denumire` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`IdMedicament`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
 
 
+-- -----------------------------------------------------
+-- Table `SQLiteProject`.`consultatii`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SQLiteProject`.`consultatii` (
+  `IdConsultatie` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `IdPacient` BIGINT(20) UNSIGNED NULL DEFAULT NULL,
+  `IdMedicament` BIGINT(20) UNSIGNED NULL DEFAULT NULL,
+  `DataConsultatie` DATE NULL DEFAULT NULL,
+  `Diagnostic` VARCHAR(45) NULL DEFAULT NULL,
+  `DozaMedicament` FLOAT UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (`IdConsultatie`),
+  INDEX `fk_consultatii_1_idx` (`IdPacient` ASC) VISIBLE,
+  INDEX `fk_consultatii_2_idx` (`IdMedicament` ASC) VISIBLE,
+  CONSTRAINT `fk_consultatii_1`
+    FOREIGN KEY (`IdPacient`)
+    REFERENCES `SQLiteProject`.`pacienti` (`IdPacient`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_consultatii_2`
+    FOREIGN KEY (`IdMedicament`)
+    REFERENCES `SQLiteProject`.`medicamente` (`IdMedicament`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
+-- Table `SQLiteProject`.`medici`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SQLiteProject`.`medici` (
+  `IdMedic` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `NumeMedic` VARCHAR(45) NULL DEFAULT NULL,
+  `PrenumeMedic` VARCHAR(45) NULL DEFAULT NULL,
+  `Specializare` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`IdMedic`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+-- -----------------------------------------------------
+-- Table `SQLiteProject`.`sectii`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SQLiteProject`.`sectii` (
+  `IdSectie` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `IdPacient` BIGINT(20) UNSIGNED NULL DEFAULT NULL,
+  `IdMedic` BIGINT(20) UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (`IdSectie`),
+  INDEX `fk_sectii_1_idx` (`IdPacient` ASC) VISIBLE,
+  INDEX `fk_sectii_2_idx` (`IdMedic` ASC) VISIBLE,
+  CONSTRAINT `fk_sectii_1`
+    FOREIGN KEY (`IdPacient`)
+    REFERENCES `SQLiteProject`.`pacienti` (`IdPacient`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_sectii_2`
+    FOREIGN KEY (`IdMedic`)
+    REFERENCES `SQLiteProject`.`medici` (`IdMedic`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
 
