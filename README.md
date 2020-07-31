@@ -1,5 +1,5 @@
 # Android-SQLite-Database-MultipleTables
-Database management application created with SQLite, using Android interface.
+Database management application created with SQLite, with authentication (for both Admin and User) using Android interface.
 
 ## Screenshots:
 <p float="left">
