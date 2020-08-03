@@ -1,4 +1,4 @@
-# Android-SQLite-Database-MultipleTables
+# Android-SQLite-Database-MultipleTables with Autenthication
 Database management application created with SQLite, with authentication (for both Admin and User) using Android interface.
 
 ## Screenshots:
