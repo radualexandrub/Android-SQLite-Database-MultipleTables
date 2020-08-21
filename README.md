@@ -1,5 +1,7 @@
 # Android-SQLite-Database-MultipleTables with Autenthication
 Database management application created with SQLite, with authentication (for both Admin and User) using Android interface.
+<img src="Images/Project_Database_MultipleTables1.png" width=1000>
+
 
 ## Screenshots:
 <p float="left">
@@ -36,7 +38,7 @@ decomposed by a link table called Sections (with PatientID and MedicID as foreig
 in this case, the connection table will be called Consultations (with PatientID and MedicineID as foreign keys).
 
 This diagram was made in MySQL Workbench environment, by writing the following SQL code:
-```
+```SQL
 -- -----------------------------------------------------
 -- Schema SQLiteProject
 -- -----------------------------------------------------
