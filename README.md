@@ -156,3 +156,14 @@ To view the records from any table, we will use a special Android class, called 
 An authenticated user in the application (Client or Administrator) will be able to perform table insertion operations. The actual insertion into the database is done using the insertSection method (or any other insertTableName method) in the DataBaseHelper.java class. But before calling this function, in the activity of the respective table there will be a FAB (Floating Action Button) button, which when pressed will display a text box dialog to complete the data to be added. The data will then be retrieved, entered into the database by the insertSection method, which will then be called the getSection method to retrieve the new object with the added data. With this object we will update the list of objects required to display all entries using RecyclerView.
 
 Modifying / updating involves the same steps as inserting, only taking into account the position of the selected item in RecyclerView. This item will in fact be the object in the Sections List (the list of objects in the classes), in which the respective id will be searched to call the updateSections method in the DataBaseHelper, followed by updating the data.
+
+## Find me on Social Networks:
+***My portfolio:*** [radubulai.com](https://radualexandrub.github.io/)<br>
+***My blog:*** [CodingTranquillity](https://codingtranquillity.herokuapp.com/)
+
+<a href="https://github.com/radualexandrub" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="radualexandrub" height="28" width="28" /></a>&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/radu-alexandru-bulai/" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="radu-alexandru-bulai" height="28" width="28" /></a>&nbsp;&nbsp;
+<a href="https://dev.to/radualexandrub" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="radualexandrub" height="28" width="28" /></a>&nbsp;&nbsp;
+<a href="https://www.hackerrank.com/RaduAlexandruB" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/hackerrank.svg" alt="RaduAlexandruB" height="28" width="28" /></a>&nbsp;&nbsp;
+<a href="https://www.flickr.com/photos/radualexandru" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/flickr.svg" alt="RaduAlexandruB" height="28" width="28" /></a>&nbsp;&nbsp;
+<a href="https://www.mixcloud.com/radu-alexandru7" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/mixcloud.svg" alt="RaduAlexandru" height="28" width="28" /></a>&nbsp;&nbsp;
